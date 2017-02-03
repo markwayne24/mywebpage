@@ -1,0 +1,13 @@
+body {
+  margin:0px;
+  padding: 0px;
+}
+.front {
+    width: 100%;
+    margin: 0px;
+}
+
+.front img{
+  width: 100%;
+  height: 500px;
+}
