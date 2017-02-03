@@ -1,13 +1,274 @@
 body {
   margin:0px;
   padding: 0px;
-}
-.front {
-    width: 100%;
-    margin: 0px;
+  font-family: "Arial";
 }
 
-.front img{
+#navigation {
+	background-color: #008080;
+	font-weight: bold;
+	margin:0px;
+	box-shadow: 0px 2px 1px 0px #406363;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: white !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #008080 !important;
+  background-color: white !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+/* divider */
+.divider {
+	width: 80%;
+	margin:5% auto;
+	border: 0.5px solid #008080;
+	box-shadow: 1px 1px 2px #016565;
+}
+
+/*front image */
+#front {
+    width: 100%;
+    margin-top: 60px;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+}
+
+#front img{
+  margin:0px;
   width: 100%;
-  height: 500px;
+  height: 600px;
+  z-index: -1;
+}
+
+.front-txt {
+	font-weight: bold;
+	font-family: "Arial";
+	font-size: 70px;
+	right: auto;
+	z-index: 999;
+	color:white;
+	position: absolute;
+	top: 40%;
+	bottom: 50%;
+	left: 20%;
+	right: 20%;
+	text-align: center;
+}
+
+.front-flip {
+	margin-top: 0px;
+	opacity: 0.2;
+	line-height: 0px;
+	margin-left: -17px;
+	/* Rotate div */
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+/* About */
+#about {
+	margin:50px 0px 0px 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.about-bg {
+	/* The image used */
+    background-image: url("http://www.raheelshah.com/wp-content/uploads/2016/06/about1.jpg");
+
+    /* Set a specific height */
+    height: 300px; 
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-content {
+	color: white;
+	margin-top: 20px;
+	padding:20px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 2px;
+}
+
+#about-left {
+	padding:50px;
+	background-color: #0d9b9b;	
+}
+
+#about-right img{
+	width: 300px;
+	height: 300px;
+}
+
+/* Porfolio */
+#portfolio {
+	text-align: center;
+}
+
+.portfolio-bg {
+	/* The image used */
+    background-image: url("http://nextlevel-va.com/wordpress/wp-content/uploads/2015/08/portfolio-image.jpg");
+
+    /* Set a specific height */
+    height: 300px; 
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.portfolio-img {
+	width: 300px;
+	height: 300px;
+}
+
+.portfolio-content{
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+/* Contact */
+
+#contact{
+	margin: 0px;
+	padding:0px;
+	text-align: center;
+}
+
+#bg-contact {
+	/* The image used */
+    background-image: url("https://www.oldwestbury.edu/sites/default/files/images/Globe-contact.jpg");
+
+    /* Set a specific height */
+    height: 300px; 
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contact h1 {
+	font-weight: bolder;
+	margin: 20px auto;
+}
+
+.btn-send {
+	background-color: #008080;
+	padding: 10px;
+}
+
+.btn-send a{
+	color: white;
+}
+
+.contact-right p{
+	padding: 30px;
+	text-align: left;
+	font-weight: bold;
+}
+
+footer {
+	width: 100%;
+	height: 200px;
+	margin:10px 0px 0px 0px;
+	background-color: #008080;
+}
+
+/*Slide Show */
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: 20px auto;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Slide Animation */
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
 }
